@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Travel Trips</string>
+    <string name="button.finish">FINISH</string>
+    <string name="button.next">NEXT</string>
+    <string name="button.skip">SKIP</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

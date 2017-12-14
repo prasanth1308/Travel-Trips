@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="activeIndicatorColor">#5ea2be</color>
+    <color name="InActiveIndicatorColor">#8fd5f2</color>
+    <color name="colorOnBoardTitle">#004278</color>
+    <color name="colorOnBoardDescription">#7b7b7b</color>
+    <color name="solid_one">#4abc96</color>
+    <color name="solid_two">#357180</color>
+    <color name="solid_three">#ffce00</color>
+    <color name="grey">#e0e0e0</color>
+
+</resources>
