@@ -71,7 +71,7 @@ public class OnBoarding extends AhoyOnboarderActivity {
     public void onFinishButtonPressed() {
         finishOnboarding();
         Toast.makeText(this, "Finish Pressed", Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(OnBoarding.this,MainActivity.class);
+        Intent intent=new Intent(OnBoarding.this,LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
@@ -86,7 +86,7 @@ public class OnBoarding extends AhoyOnboarderActivity {
                 .putBoolean("onboarding_complete",true).apply();
 
         // Launch the main Activity, called MainActivity
-        Intent main = new Intent(this, MainActivity.class);
+        Intent main = new Intent(this, LoginActivity.class);
         startActivity(main);
 
         // Close the OnboardingActivity
