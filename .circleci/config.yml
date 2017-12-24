@@ -39,11 +39,10 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
           
           
-   override:
-    - sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
-          
       # run tests!
       - run: gradle test
-
+      
+   override:
+    - sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
 
 
