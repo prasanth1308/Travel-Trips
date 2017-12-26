@@ -28,6 +28,16 @@ public class AppStartActivity extends AppCompatActivity {
             finish();
             Toast.makeText(this, "HIT", Toast.LENGTH_SHORT).show();
             return;
+        } else {
+            // Start the login Activity
+            Intent login = new Intent(this, LoginActivity.class);
+            startActivity(login);
+
+            // Close the main Activity
+            finish();
+            Toast.makeText(this, "HIT", Toast.LENGTH_SHORT).show();
+            //return;
+
         }
         checkForUpdates();
         //setContentView(R.layout.activity_app_start);

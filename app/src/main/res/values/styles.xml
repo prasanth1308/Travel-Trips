@@ -17,4 +17,16 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+
+    <style name="GoogleLogin" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">#E74B37</item>
+        <item name="colorButtonNormal">#DD4B39</item>
+    </style>
+
+    <style name="FbLogin" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">#354C8C</item>
+        <item name="colorButtonNormal">#3e58a4</item>
+    </style>
+
 </resources>

@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="0dp"
     tools:context="com.technoblaze.traveltrips.traveltrips.LoginActivity">
 
     <!-- Login progress -->
@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
     <ScrollView
         android:id="@+id/login_form"
@@ -29,6 +29,73 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" >
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:theme="@style/FbLogin"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:drawableLeft="@drawable/fb_login_icon"
+                    android:text="@string/action_sign_in_facebook" />
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/GoogleLogin"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/google_login_32"
+                    android:text="@string/action_sign_in_google" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/line1"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="1dp"
+                    android:padding="0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#e6e4e4" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Or use email address"
+                    android:gravity="center|center|top"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:id="@+id/line2"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#e6e4e4" />
+
+            </TableRow>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -63,15 +130,45 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <TextView
+                android:id="@+id/forgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="click"
+                android:text="FORGET PASSWORD?" />
+
             <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
+                android:id ="@+id/email_sign_in_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
                 android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+                android:background="@drawable/login_button"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:clickable="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="click"
+                android:text="DO NOT HAVE AN ACCOUNT? SIGNUP" />
 
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
