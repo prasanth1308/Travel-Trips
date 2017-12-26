@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build-job:
     working_directory: ~/code
     docker:
       - image: circleci/android:api-25-alpha
@@ -25,7 +25,7 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-  deploy:
+  deploy-job:
        docker:
          - image: my-image
        working_directory: /tmp/my-project  
@@ -36,12 +36,12 @@ jobs:
                
     workflows:
       version: 2
-      -deploy-job:
+      -build:
         jobs:
-          - build
-          - deploy:
+          - build-job
+          - deploy-job:
               requires:
-                - build
+                - build-job
               filters:
                 branches:
                   only: master
