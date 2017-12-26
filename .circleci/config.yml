@@ -26,7 +26,7 @@ jobs:
       - store_test_results:
           path: app/build/test-results
           
-deploy-job:
+  deploy-job:
        docker:
          - image: my-image
        working_directory: /tmp/my-project  
