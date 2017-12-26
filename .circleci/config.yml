@@ -26,7 +26,7 @@ jobs:
       - store_test_results:
           path: app/build/test-results
           
- deploy-job:
+ deploy:
        docker:
          - image: my-image
        working_directory: /tmp/my-project  
@@ -40,10 +40,10 @@ jobs:
       
       -deploy:
         jobs:
-          - build-job
-          - deploy-job:
+          - build
+          - deploy:
               requires:
-                - build-job
+                - build
               filters:
                 branches:
                   only: master
