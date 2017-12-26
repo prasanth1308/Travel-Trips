@@ -25,7 +25,6 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-          
   deploy-job:
        docker:
          - image: my-image
@@ -37,7 +36,6 @@ jobs:
                
     workflows:
       version: 2
-      
       -deploy:
         jobs:
           - build-job
