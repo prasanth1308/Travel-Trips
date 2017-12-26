@@ -26,10 +26,10 @@ jobs:
       - store_test_results:
           path: app/build/test-results
           
- deploy-job:
+ deploy:
        docker:
-         - image: my-image
-       working_directory: /tmp/my-project  
+         - image: circleci/android:api-25-alpha
+       working_directory: ~/code  
        steps:
          - run:
              name: Deploy Master to Firebase
@@ -38,12 +38,12 @@ jobs:
     workflows:
       version: 2
       
-      -deploy:
+      -build-deploy:
         jobs:
-          - build-job
-          - deploy-job:
+          - build
+          - deploy:
               requires:
-                - build-job
+                - build
               filters:
                 branches:
                   only: master
