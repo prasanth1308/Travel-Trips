@@ -25,7 +25,8 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-  deploy-job:
+          
+deploy-job:
        docker:
          - image: my-image
        working_directory: /tmp/my-project  
@@ -34,9 +35,10 @@ jobs:
              name: Deploy Master to Firebase
              command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
                
-    workflows:
+workflows:
       version: 2
-      -build:
+      
+      -deploy:
         jobs:
           - build-job
           - deploy-job:
@@ -45,5 +47,4 @@ jobs:
               filters:
                 branches:
                   only: master
-               
     
