@@ -28,8 +28,8 @@ jobs:
           
   deploy-job:
        docker:
-         - image: my-image
-       working_directory: /tmp/my-project  
+         - image:  circleci/android:api-25-alpha
+       working_directory: ~/code 
        steps:
          - run:
              name: Deploy Master to Firebase
