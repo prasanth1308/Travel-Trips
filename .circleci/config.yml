@@ -27,11 +27,9 @@ jobs:
           path: app/build/test-results
           
   deploy:
-          requires:
-                - build
-          filters:
-                branches:
-                  only: master
+       docker:
+         - image: my-image
+       working_directory: /tmp/my-project 
           steps:
             - run:
                name: Deploy Master to Firebase
