@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "856262828826",
+    "firebase_url": "https://traveltrips-d7721.firebaseio.com",
+    "project_id": "traveltrips-d7721",
+    "storage_bucket": "traveltrips-d7721.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856262828826:android:e6b1b928d1462333",
+        "android_client_info": {
+          "package_name": "com.technoblaze.traveltrips.traveltrips"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856262828826-5g5hlrhir2vnailac0hdr4mcknsjoia1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGs3qm33COL_RwmRMI4vSO_rDsN52vRa4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
