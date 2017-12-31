@@ -5,8 +5,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -144,6 +147,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     private void attemptLogin() {
         if (mAuthTask != null) {
             return;
@@ -160,23 +164,37 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         boolean cancel = false;
         View focusView = null;
 
+        TextInputLayout emailLayout = (TextInputLayout) findViewById(R.id.email_input_layout);
+        TextInputLayout passwordLayout = (TextInputLayout) findViewById(R.id.password_input_layout);
+
+
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
+        if (TextUtils.isEmpty(password)) {
+            //mPasswordView.setError(getString(R.string.error_invalid_password));
+            passwordLayout.setError(getString(R.string.password_field_required));
+            focusView = mPasswordView;
+            cancel = true;
+        } else if (!isPasswordValid(password)) {
+            //mEmailView.setError(getString(R.string.error_invalid_email));
+            emailLayout.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
+            //mEmailView.setError(getString(R.string.error_field_required));
+            emailLayout.setError(getString(R.string.email_field_required));
             focusView = mEmailView;
             cancel = true;
         } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
+            //mEmailView.setError(getString(R.string.error_invalid_email));
+            emailLayout.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
         }
+
+
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -281,7 +299,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     public void click(View view) {
-
+        Intent intent = null;
+        switch(view.getId()) {
+            case R.id.signUp:
+                intent = new Intent(this, SignUpActivity.class);
+                break;
+            case R.id.forgetPassword:
+                intent = new Intent(this, ForgetPasswordActivity.class);
+                break;
+        }
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 

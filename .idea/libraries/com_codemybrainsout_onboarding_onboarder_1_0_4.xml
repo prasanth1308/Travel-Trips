@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.codemybrainsout.onboarding:onboarder-1.0.4">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/onboarder-1.0.4.aar/805aad347fefd6b388ebae6d43c33ad9/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/onboarder-1.0.4.aar/805aad347fefd6b388ebae6d43c33ad9/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/onboarder-1.0.4.aar/b53bb4dee49b4695e186c1cae2e3ec5e/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/onboarder-1.0.4.aar/b53bb4dee49b4695e186c1cae2e3ec5e/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

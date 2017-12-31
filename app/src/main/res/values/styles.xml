@@ -18,7 +18,6 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-
     <style name="GoogleLogin" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#E74B37</item>
         <item name="colorButtonNormal">#DD4B39</item>
@@ -27,6 +26,20 @@
     <style name="FbLogin" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#354C8C</item>
         <item name="colorButtonNormal">#3e58a4</item>
+    </style>
+
+
+    <style name="generalnotitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="TextLabel">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/DrakGrey</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/common_action_bar_splitter</item>
+        <item name="colorControlActivated">@color/floatingLabel</item>
     </style>
 
 </resources>

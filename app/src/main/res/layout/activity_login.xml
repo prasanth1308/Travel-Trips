@@ -1,12 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="0dp"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="0dp"
     tools:context="com.technoblaze.traveltrips.traveltrips.LoginActivity">
 
@@ -28,6 +27,8 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
             android:orientation="vertical">
 
             <TableRow
@@ -98,6 +99,9 @@
             </TableRow>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_input_layout"
+                android:theme="@style/TextLabel"
+                app:errorEnabled="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -113,6 +117,9 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_input_layout"
+                android:theme="@style/TextLabel"
+                app:errorEnabled="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -134,11 +141,12 @@
                 android:id="@+id/forgetPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginBottom="10dp"
+                android:layout_gravity="right"
                 android:clickable="true"
                 android:onClick="click"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="FORGET PASSWORD?" />
 
             <Button
@@ -159,13 +167,12 @@
             <TextView
                 android:id="@+id/signUp"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:clickable="true"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
                 android:onClick="click"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
                 android:text="DO NOT HAVE AN ACCOUNT? SIGNUP" />
 
         </LinearLayout>

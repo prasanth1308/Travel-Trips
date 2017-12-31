@@ -13,5 +13,7 @@
     <color name="solid_two">#357180</color>
     <color name="solid_three">#ffce00</color>
     <color name="grey">#e0e0e0</color>
-
+    <color name="DrakGrey">#a9a5a5</color>
+    <color name="errorMessage">#ea0a24</color>
+    <color name="floatingLabel">#ff770f</color>
 </resources>
