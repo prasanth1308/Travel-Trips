@@ -36,7 +36,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ForgetPasswordActivity"
-            android:label="@string/title_activity_forget_password"/>
+            android:label="@string/title_activity_forget_password" />
+        <activity
+            android:name=".TermsConditionsActivity"
+            android:label="@string/title_terms_conditions"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

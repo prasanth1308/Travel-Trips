@@ -167,6 +167,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         TextInputLayout emailLayout = (TextInputLayout) findViewById(R.id.email_input_layout);
         TextInputLayout passwordLayout = (TextInputLayout) findViewById(R.id.password_input_layout);
 
+        emailLayout.setError(null);
+        passwordLayout.setError(null);
+
 
         // Check for a valid password, if the user entered one.
         if (TextUtils.isEmpty(password)) {
@@ -176,7 +179,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             cancel = true;
         } else if (!isPasswordValid(password)) {
             //mEmailView.setError(getString(R.string.error_invalid_email));
-            emailLayout.setError(getString(R.string.error_invalid_password));
+            passwordLayout.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
