@@ -31,11 +31,15 @@
         completions."
     </string>
     <string name="title_activity_forget_password">Forget Password</string>
-    <string name="title_activity_sign_up_login">HAVE AN ACCOUNT?LOGIN</string>
+    <string name="title_activity_sign_up_login">HAVE AN ACCOUNT?</string>
     <string name="title_terms_conditions_checkbox">I have read and accept</string>
     <string name="title_terms_conditions"> Terms and Conditions</string>
     <string name="title_activity_sign">Sign up</string>
     <string name="description_activity_forget_password">Enter your email and we will send a link to recover your accout.</string>
     <string name="title_activity_terms_conditions">Terms Conditions</string>
+
+
+    <string name="facebook_app_id">351837651951877</string>
+    <string name="fb_login_protocol_scheme">fb351837651951877</string>
 
 </resources>

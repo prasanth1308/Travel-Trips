@@ -144,7 +144,7 @@
                 android:onClick="click"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:text="FORGET PASSWORD?" />
 
             <Button
@@ -162,16 +162,43 @@
                 android:background="@drawable/login_button"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/signUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TableRow
+                android:id="@+id/tableRowSignup4"
                 android:layout_gravity="center"
-                android:clickable="true"
-                android:onClick="click"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
-                android:text="DO NOT HAVE AN ACCOUNT? SIGNUP" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="DO NOT HAVE AN ACCOUNT?"/>
+
+                <TextView
+                    android:id ="@+id/signUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/floatingLabel"
+                    android:padding="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="SIGNUP"
+                    android:gravity="left"
+                    android:clickable="true"
+                    android:onClick="click"/>
+
+            </TableRow>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone"/>
 
         </LinearLayout>
     </ScrollView>

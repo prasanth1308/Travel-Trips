@@ -38,7 +38,7 @@
         <item name="android:textColorHint">@color/DrakGrey</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
         <item name="colorAccent">@color/colorPrimary</item>
-        <item name="colorControlNormal">@color/common_action_bar_splitter</item>
+        <item name="colorControlNormal">@color/grey_300</item>
         <item name="colorControlActivated">@color/floatingLabel</item>
     </style>
 
