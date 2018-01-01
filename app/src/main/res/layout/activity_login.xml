@@ -119,7 +119,10 @@
                 android:id="@+id/password_input_layout"
                 android:theme="@style/TextLabel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:passwordToggleDrawable="@drawable/asl_password_visibility"
+                app:passwordToggleTint="?colorControlNormal"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/password"

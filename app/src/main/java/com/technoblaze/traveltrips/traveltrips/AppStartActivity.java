@@ -2,8 +2,13 @@ package com.technoblaze.traveltrips.traveltrips;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.facebook.FacebookSdk;
@@ -11,6 +16,9 @@ import com.facebook.appevents.AppEventsLogger;
 
 import net.hockeyapp.android.CrashManager;
 import net.hockeyapp.android.UpdateManager;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class AppStartActivity extends AppCompatActivity {
 

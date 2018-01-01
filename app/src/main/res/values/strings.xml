@@ -38,8 +38,14 @@
     <string name="description_activity_forget_password">Enter your email and we will send a link to recover your accout.</string>
     <string name="title_activity_terms_conditions">Terms Conditions</string>
 
-
+    <string name="auth_failed">Login auth failed</string>
     <string name="facebook_app_id">351837651951877</string>
     <string name="fb_login_protocol_scheme">fb351837651951877</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>
